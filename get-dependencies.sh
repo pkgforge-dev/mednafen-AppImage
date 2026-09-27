@@ -34,6 +34,7 @@ tar -xf ./mednafen.tar.xz
 
 (
 	cd ./mednafen
+	patch -p1 < ../patches/alsa-use-default-device.patch
 	./configure --prefix="/usr"
 	make -j"$(nproc)"
 	make install
